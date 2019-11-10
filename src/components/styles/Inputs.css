@@ -1,0 +1,30 @@
+.inputs-container {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui.compact.selection.dropdown {
+    width: 55px;
+    margin: 0 5px;
+}
+
+
+/* button styles */
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.ui.button {
+    margin-right: 0;
+    margin-left: 3.5px;
+}
