@@ -66,7 +66,9 @@ class Inputs extends React.Component {
     }
 
     convertToArabic = (e) => {
+
         e.preventDefault()
+
         const { value1, value2, value1Arr, value2Arr, hold } = this.state;
 
         //prevent further array modifications (and calculations) if input hasn't been modified after displaying the result
@@ -216,7 +218,7 @@ class Inputs extends React.Component {
         await this.doCalc()
 
         //if value is out of upper range of Roman numbers
-        if (this.state.result > 3999 || this.state.err) {
+        if (this.state.result > 3999) {
             this.setState({ err: "OOR" }, () => this.displayError());
             return;
         }
@@ -330,8 +332,9 @@ class Inputs extends React.Component {
 
     //send error status to parent in case of error
     displayError = () => {
-        if (this.state.err)
+        if (this.state.err) {
             this.props.showErr(this.state.err)
+        }
     }
 
     //handle operator change
@@ -339,8 +342,11 @@ class Inputs extends React.Component {
         this.setState({ operator: data.value, err: false })
     }
 
-    handleReset = () => {
+    handleReset = (e) => {
+        e.preventDefault();
+        this.props.printResult('')
         this.setState(initialState);
+
     }
 
     render() {
@@ -355,60 +361,60 @@ class Inputs extends React.Component {
         ]
 
         return (
-            <form onSubmit={this.calculate}>
 
-                <div className="inputs-container">
+                <form>
 
-                    <div className="input-container">
+                    <div className="inputs-container">
 
-                        <Input onChange={this.handleValue} value={value1} placeholder='Input 1' />
+                        <div className="input-container">
 
-                        {/* error label */}
-                        <Label
-                            basic
-                            color='red'
-                            pointing
-                            style={{ display: this.state.val1Empty ? "block" : "none" }}
-                        >
-                            Please enter a value
-                        </Label>
+                            <Input onChange={this.handleValue} value={value1} placeholder='Input 1' />
+
+                            {/* error label */}
+                            <Label
+                                basic
+                                color='red'
+                                pointing
+                                style={{ display: this.state.val1Empty ? "block" : "none" }}
+                            >
+                                Please enter a value
+                            </Label>
+
+                        </div>
+
+                        <Dropdown
+                            value={operator}
+                            selection
+                            compact
+                            onChange={this.operatorChange}
+                            options={options}
+                        />
+
+                        <div className="input-container">
+
+                            <Input onChange={this.handleValue} value={value2} placeholder='Input 2' />
+
+                            {/* error label */}
+                            <Label
+                                basic
+                                color='red'
+                                pointing
+                                style={{ display: this.state.val2Empty ? "block" : "none" }}
+                            >
+                                Please enter a value
+                            </Label>
+
+                        </div>
 
                     </div>
 
-                    <Dropdown
-                        value={operator}
-                        selection
-                        compact
-                        onChange={this.operatorChange}
-                        options={options}
-                    />
-
-                    <div className="input-container">
-
-                        <Input onChange={this.handleValue} value={value2} placeholder='Input 2' />
-
-                        {/* error label */}
-                        <Label
-                            basic
-                            color='red'
-                            pointing
-                            style={{ display: this.state.val2Empty ? "block" : "none" }}
-                        >
-                            Please enter a value
-                        </Label>
-
+                    <div className="btn-container">
+                        <ResetBtn reset={this.handleReset} />
+                        <CalcBtn  calculate={this.convertToArabic} />
                     </div>
 
-                </div>
+                </form>
 
-                <div className="btn-container">
-
-                    <ResetBtn reset={this.handleReset} />
-                    <CalcBtn calculate={this.convertToArabic} />
-
-                </div>
-
-            </form>
         )
     }
 }

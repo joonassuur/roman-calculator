@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
 }
 .result-container {
-    font-size: 24px;
+    font-size: 22px;
     height: calc(100% - 88px);
     display: flex;
     justify-content: center;

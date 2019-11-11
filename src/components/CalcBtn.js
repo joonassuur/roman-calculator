@@ -3,7 +3,7 @@ import { Button } from 'semantic-ui-react'
 
 const CalcBtn = (props) => {
 
-    return  <Button onClick={props.calculate}>Calculate</Button>
+    return  <Button type="submit" onClick={props.calculate}>Calculate</Button>
 
 }
 
