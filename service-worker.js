@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/roman-calculator/precache-manifest.6e84e3c823e66b511ba02b0f40882c20.js"
+  "/roman-calculator/precache-manifest.89536ef56baa66ca2aa43af2d3f0d71d.js"
 );
 
 self.addEventListener('message', (event) => {

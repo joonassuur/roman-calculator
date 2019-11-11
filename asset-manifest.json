@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/roman-calculator/static/css/main.fef139e3.chunk.css",
-    "main.js": "/roman-calculator/static/js/main.f3734d4c.chunk.js",
-    "main.js.map": "/roman-calculator/static/js/main.f3734d4c.chunk.js.map",
+    "main.css": "/roman-calculator/static/css/main.d007e4f0.chunk.css",
+    "main.js": "/roman-calculator/static/js/main.98a2bacd.chunk.js",
+    "main.js.map": "/roman-calculator/static/js/main.98a2bacd.chunk.js.map",
     "runtime-main.js": "/roman-calculator/static/js/runtime-main.331c61a5.js",
     "runtime-main.js.map": "/roman-calculator/static/js/runtime-main.331c61a5.js.map",
     "static/js/2.312d7590.chunk.js": "/roman-calculator/static/js/2.312d7590.chunk.js",
     "static/js/2.312d7590.chunk.js.map": "/roman-calculator/static/js/2.312d7590.chunk.js.map",
     "index.html": "/roman-calculator/index.html",
-    "precache-manifest.6e84e3c823e66b511ba02b0f40882c20.js": "/roman-calculator/precache-manifest.6e84e3c823e66b511ba02b0f40882c20.js",
+    "precache-manifest.89536ef56baa66ca2aa43af2d3f0d71d.js": "/roman-calculator/precache-manifest.89536ef56baa66ca2aa43af2d3f0d71d.js",
     "service-worker.js": "/roman-calculator/service-worker.js",
-    "static/css/main.fef139e3.chunk.css.map": "/roman-calculator/static/css/main.fef139e3.chunk.css.map"
+    "static/css/main.d007e4f0.chunk.css.map": "/roman-calculator/static/css/main.d007e4f0.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.331c61a5.js",
     "static/js/2.312d7590.chunk.js",
-    "static/css/main.fef139e3.chunk.css",
-    "static/js/main.f3734d4c.chunk.js"
+    "static/css/main.d007e4f0.chunk.css",
+    "static/js/main.98a2bacd.chunk.js"
   ]
 }
